@@ -1,0 +1,74 @@
+# 服务器配置
+server:
+  port: 8080
+  mode: release # debug, release, test
+
+# 数据库配置
+database:
+  driver: mysql
+  host: ${database.host}
+  port: ${database.port}
+  username: ${database.username}
+  password: ${database.password}
+  dbname: ${database.dbname}
+  charset: utf8mb4
+  max_idle_conns: 10
+  max_open_conns: 100
+
+redis:
+  host: ${redis.host}
+  port: ${redis.port}
+  password: ${redis.password}
+  database: ${redis.database}
+  pool_size: 50
+  min_idle_conns: 5
+  idle_timeout: 300
+  dial_timeout: 5
+  read_timeout: 3
+  write_timeout: 3
+
+# 日志配置
+log:
+  level: debug # debug, info, warn, error
+  filename: ./logs/app.log
+  max_size: 100 # MB
+  max_backups: 10
+  max_age: 30 # days
+  compress: false
+
+# JWT配置
+jwt:
+  # 设置jwt签名加密时使用的密钥
+  admin_secret_key: ${jwt.admin_secret_key}
+  admin_ttl: 7200000
+  admin_token_name: token
+  user_secret_key: ${jwt.user_secret_key}
+  user_ttl: 7200000
+  user_token_name: authentication
+
+# 阿里云OSS配置
+oss:
+  endpoint: ${oss.endpoint}
+  access_key_id: ${oss.access_key_id}
+  access_key_secret: ${oss.access_key_secret}
+  bucket_name: ${oss.bucket_name}
+
+wechat:
+  app_id: ${wechat.app_id}
+  app_secret_key: ${wechat.app_secret_key}
+  mchid: ${wechat.mchid}
+  mch-serial-no: ${wechat.mch-serial-no}
+  private-key-file-path: ${wechat.private-key-file-path}
+  api-v3-key: ${wechat.api-v3-key}
+  we-chat-pay-cert-file-path: ${wechat.we-chat-pay-cert-file-path}
+  notify-url: ${wechat.notify-url}
+  refund-notify-url: ${wechat.refund-notify-url}
+
+shop:
+  address: ${shop.address}
+
+baidu:
+  ak: ${baidu.ak}
+
+template:
+  path: ./template/template.xlsx

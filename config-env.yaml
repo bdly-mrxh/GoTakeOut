@@ -1,0 +1,40 @@
+# 环境变量配置文件
+database:
+  host: 
+  port: 
+  username: 
+  password: 
+  dbname: 
+
+redis:
+  host: 
+  port: 
+  password: 
+  database: 
+
+jwt:
+  admin_secret_key: 
+  user_secret_key: 
+
+oss:
+  endpoint: 
+  access_key_id: your-access-key-id
+  access_key_secret: your-access-key-secret
+  bucket_name: your-bucket-name
+
+wechat:
+  app_id: 
+  app_secret_key: 
+  mchid: XX
+  mch_serial_no: XX
+  private_key_file_path: XX
+  api_v3_key: XX
+  we_chat_pay_cert_file_path: XX
+  notify_url: XX
+  refund_notify_url: XX
+
+shop:
+  address: 
+
+baidu:
+  ak: 
