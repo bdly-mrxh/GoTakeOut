@@ -59,7 +59,7 @@ GoTakeOut/
 1. 克隆仓库
 
 ```bash
-git clone https://github.com/bdly-mrxh/GoTakeOut.git
+git clone https://github.com/bdly-mrxh/go-take-out.git
 cd GoTakeOut
 ```
 
